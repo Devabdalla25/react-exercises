@@ -1,3 +1,6 @@
 # this repo is contains all react exercises in mentorship
 # [exercise 1](exercise-1)
 # [exercise 2](exercise-2)
+# [exercise 3](exercise-3)
+# [exercise 4](exercise-4)
+# [exercise 5](exercise-5)
