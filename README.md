@@ -5,3 +5,5 @@
 # [exercise 4](exercise-4)
 # [exercise 5](exercise-5)
 # [exercise 6](exercise-6)
+# [exercise 7](exercise-7)
+# [exercise 8](exercise-8)
