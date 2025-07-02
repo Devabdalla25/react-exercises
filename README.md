@@ -9,3 +9,6 @@
 # [exercise 8](exercise-8)
 # [exercise 9](exercise-9)
 # [exercise 10](exercise-10)
+# [exercise 11](exercise-11)
+# [exercise 12](exercise-12)
+# [exercise 13](exercise-13)
