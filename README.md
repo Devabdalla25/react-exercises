@@ -14,3 +14,5 @@
 # [exercise 13](exercise-13)
 # [exercise 13](exercise-13)
 # [exercise 14](exercise-14)
+# [exercise 15](exercise-15)
+# [exercise 16](exercise-16)
