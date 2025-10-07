@@ -1,0 +1,29 @@
+.AppContainer{
+    width:100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(245, 218, 245);
+}
+.AppInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.25rem;
+    background-color: #fff;
+    color: #000; 
+    border-radius: 1rem;
+    width: 30%;
+}
+.AppInfo:hover {
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2{
+    font-size: x-large;
+    font-weight: bold;
+}
