@@ -23,3 +23,4 @@
 # [exercise 21](exercise-21)
 # [exercise 22](exercise-22)
 # [exercise 23](exercise-23)
+# [exercise 24](exercise-24)

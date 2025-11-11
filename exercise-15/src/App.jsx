@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
-import LanguageContext from './LanguageContext';
-import Greeting from './Greeting';
+import React, { useState } from 'react'
+import LanguageContext from './LanguageContext'
+import Greating from './Greeting'
 
-function App() {
-  const [language, setLanguage] = useState('en');
+const App = () => {
 
-  const toggleLanguage = () => {
-    setLanguage((prevLang) => (prevLang === 'en' ? 'es' : 'en'));
-  };
+  const [Language, setLanguage]=useState('en');
 
+  const HandleLanguage=()=>{
+    setLanguage((prelang)=>(prelang ==='en'?'es':'en'));
+  }
   return (
-    <LanguageContext.Provider value={language}>
-      <button onClick={toggleLanguage}>
-        Switch to {language === 'en' ? 'Spanish' : 'English'}
-      </button>
-      <Greeting />
+    <LanguageContext.Provider value={Language}>
+      <button onClick={HandleLanguage}>Switch to {Language ==='en' ? 'Spanish': 'English'}</button>
+     <Greating/>
     </LanguageContext.Provider>
-  );
+  )
 }
 
-export default App;
+export default App

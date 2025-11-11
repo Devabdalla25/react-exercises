@@ -1,15 +1,16 @@
-import React, { useContext } from 'react';
-import LanguageContext from './LanguageContext';
+import React, { useContext } from 'react'
+import LanguageContext from './LanguageContext'
+const Greeting = () => {
 
-function Greeting() {
-  const language = useContext(LanguageContext);
+  const Language=useContext(LanguageContext);
 
-  const messages = {
-    en: 'Hello!',
-    es: '¡Hola!',
-  };
-
-  return <h1>{messages[language]}</h1>;
+  const Greating={
+    en:'Hello!',
+    es:'~Holla!'
+  }
+  return <h1>{
+    Greating[Language]
+  }</h1>
 }
 
-export default Greeting;
+export default Greeting
