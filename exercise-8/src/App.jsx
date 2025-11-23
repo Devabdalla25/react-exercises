@@ -1,48 +1,65 @@
-import {useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react';
 
 const App = () => {
-   const [initialTime, setInitialTime] = useState(30);
-  const [leftTime, setLeftTime] = useState(30);
+  const [initialTime, setInitialTime] = useState(30);
+  const [timeLeft, setTimeLeft] = useState(30);
   const [isRunning, setIsRunning] = useState(false);
 
-    useEffect(() => {
-    let timerid;
-    if (isRunning && leftTime > 0) {
-      timerid = setInterval(() => {
-        setLeftTime((prev) => prev - 1);
+  useEffect(() => {
+    let timerId;
+    if (isRunning && timeLeft > 0) {
+      timerId = setInterval(() => {
+        setTimeLeft((prev) => prev - 1);
       }, 1000);
     }
-    
-  
-    return () => clearInterval(timerid);
-  }, [isRunning,leftTime]);
 
-  const handleStart=()=>{
-    setIsRunning(true)
-  }
-  const handleStop=()=>{
-    setIsRunning(false)
-  }
-  const handleReset=()=>{
-    setIsRunning(false)
-    setInitialTime(initialTime)
-  }
-   const handleInputChange = (e) => {
-    const value = Number(e.target.value);
-    setInitialTime(value);
-    setLeftTime(value);
+    // Cleanup: clear interval
+    return () => clearInterval(timerId);
+  }, [isRunning, timeLeft]);
+
+  const handleStart = () => {
+    if (timeLeft > 0) {
+      setIsRunning(true);
+    }
+  };
+
+  const handleStop = () => {
     setIsRunning(false);
   };
+
+  const handleReset = () => {
+    setIsRunning(false);
+    setTimeLeft(initialTime);
+  };
+
+  const handleInputChange = (e) => {
+    const value = Number(e.target.value);
+    setInitialTime(value);
+    setTimeLeft(value);
+    setIsRunning(false);
+  };
+
   return (
     <div>
-            <h1>Countdown Timer</h1>
-      <h1>Set Time (seconds): <input type="number" value={initialTime} onChange={handleInputChange}/></h1>
-      <h1>Time Left :{leftTime} seconds</h1>
-      <button disabled={isRunning || leftTime === 0}  onClick={handleStart}>Start</button>
-      <button disabled={!isRunning  || leftTime === 0} onClick={handleStop}>Stop</button>
-      <button onClick={handleReset}>Resset</button>
+      <h2>Count Timer</h2>
+      <label>Set Time (seconds): </label>
+      <input
+        type="number"
+        value={initialTime}
+        onChange={handleInputChange}
+      />
+      <p>Time Left: {timeLeft} seconds</p>
+      <button onClick={handleStart} disabled={isRunning || timeLeft === 0}>
+        Start
+      </button>
+      <button onClick={handleStop} disabled={!isRunning}>
+        Stop
+      </button>
+      <button onClick={handleReset}>
+        Reset
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

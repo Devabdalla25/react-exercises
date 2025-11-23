@@ -1,37 +1,25 @@
 import { useState, useEffect } from 'react';
 
 const App = () => {
-  const [titleName, setTitleName] = useState("");
-  const [greatting, setGreatting] = useState("Hello");
+ const [TiltileName,setTitleName]=useState("");
+ const [Greating, SetGreating]=useState(" Hellow");
 
-  useEffect(() => {
-    {
-      titleName ==="" ? document.title = "Welcome" :document.title=greatting + ", " +titleName; 
-    
-    }
-  }, [titleName]);
+ useEffect(()=>{
+  TiltileName ===" "? document.title = "Welcome!":document.title = Greating+', '+TiltileName;
+ },[TiltileName])
   return (
     <div>
       <div>
-        <h2>Enter Your Name</h2>
-        <input 
-          type="text" 
-          placeholder="Enter Your Name" 
-          value={titleName} 
-          onChange={(e) => setTitleName(e.target.value)} 
-        />
+        <input type="text" value={TiltileName} placeholder='Enter your name' onChange={(e)=> setTitleName(e.target.value)}/>
       </div>
       <div>
-        <h2>Choose a Greeting</h2>
-        <input 
-          type="text" 
-          placeholder="Choose Your Greeting" 
-          value={greatting} 
-          onChange={(e) => setGreatting(e.target.value)} 
-        />
+        <h1> Write Your Greating Here</h1>
+        <input type="text" value={Greating} placeholder='Write your greating here' onChange={(e)=> SetGreating(e.target.value)}/>
       </div>
     </div>
   );
 };
 
 export default App;
+
+

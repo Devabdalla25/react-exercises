@@ -6,7 +6,6 @@ export const TodoItem = ({ todo }) => {
   return (
     <div className=" flex bg-gray-100 text-black w-lg rounded-lg justify-between items-center p-5 m-5">
       <div className="flex gap-5 justify-center items-center">
-        {" "}
         <input
           type="checkbox"
           value={todo.completed}

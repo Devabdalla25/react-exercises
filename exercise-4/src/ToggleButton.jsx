@@ -5,7 +5,7 @@ const ToggleButton = () => {
 
   const switchToggleButton = () => {
     setToggleButton(!toggleButton);
-  };https://github.com/Devabdalla25/react-exercises.git
+  };
 
   return (
     <div>
